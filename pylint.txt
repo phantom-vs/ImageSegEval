@@ -1,0 +1,34 @@
+************* Module app.models
+app/models.py:56:0: C0301: Line too long (117/100) (line-too-long)
+app/models.py:14:0: R0903: Too few public methods (0/2) (too-few-public-methods)
+app/models.py:56:64: E1102: func.now is not callable (not-callable)
+app/models.py:37:0: R0903: Too few public methods (0/2) (too-few-public-methods)
+************* Module app.main
+app/main.py:118:11: W0703: Catching too general exception Exception (broad-except)
+app/main.py:104:8: W0612: Unused variable 'jwt_error' (unused-variable)
+app/main.py:118:4: W0612: Unused variable 'error' (unused-variable)
+app/main.py:47:0: R0911: Too many return statements (7/6) (too-many-return-statements)
+app/main.py:47:0: R0912: Too many branches (13/12) (too-many-branches)
+app/main.py:181:0: R0913: Too many arguments (6/5) (too-many-arguments)
+app/main.py:224:11: W0703: Catching too general exception Exception (broad-except)
+app/main.py:198:8: E1123: Unexpected keyword argument 'db' in function call (unexpected-keyword-arg)
+app/main.py:198:8: E1120: No value for argument 'database_session' in function call (no-value-for-parameter)
+************* Module app.segmentation
+app/segmentation.py:9:0: E0401: Unable to import 'cv2' (import-error)
+************* Module app.config
+app/config.py:9:0: E0401: Unable to import 'pydantic_settings' (import-error)
+app/config.py:25:4: R0903: Too few public methods (0/2) (too-few-public-methods)
+app/config.py:12:0: R0903: Too few public methods (0/2) (too-few-public-methods)
+************* Module app.schemas
+app/schemas.py:26:4: E0213: Method should have "self" as first argument (no-self-argument)
+app/schemas.py:26:4: R0201: Method could be a function (no-self-use)
+app/schemas.py:47:4: E0213: Method should have "self" as first argument (no-self-argument)
+app/schemas.py:47:4: R0201: Method could be a function (no-self-use)
+app/schemas.py:71:4: R0903: Too few public methods (0/2) (too-few-public-methods)
+app/schemas.py:88:4: R0903: Too few public methods (0/2) (too-few-public-methods)
+************* Module app.auth
+app/auth.py:15:0: W0611: Unused SessionLocal imported from database (unused-import)
+
+------------------------------------------------------------------
+Your code has been rated at 8.16/10 (previous run: 7.99/10, +0.18)
+

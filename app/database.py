@@ -1,0 +1,37 @@
+"""Модуль для работы с базой данных.
+
+Содержит:
+- Настройку подключения к БД
+- Базовую модель SQLAlchemy
+- Фабрику сессий
+- Генератор сессий для зависимостей
+"""
+
+from sqlalchemy import create_engine
+from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.orm import sessionmaker
+
+SQLALCHEMY_DATABASE_URL = "sqlite:///./sql_app.db"
+
+engine = create_engine(
+    SQLALCHEMY_DATABASE_URL, connect_args={"check_same_thread": False}
+)
+SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+
+Base = declarative_base()
+
+# Функция для получения сессии
+def get_db():
+    """Генератор сессий базы данных.
+
+    Yields:
+        Session: Сессия SQLAlchemy
+
+    Ensures:
+        Сессия будет корректно закрыта после использования
+    """
+    db_session = SessionLocal()
+    try:
+        yield db_session
+    finally:
+        db_session.close()
