@@ -14,9 +14,8 @@
 
 ### Установка
 ```bash
-mkdir imageSeg
-cd imageSeg
 git clone https://github.com/phantom-vs/ImageSegEval.git
+cd ImageSegEval
 python -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
